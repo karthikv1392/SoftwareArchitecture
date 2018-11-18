@@ -3,6 +3,7 @@
 * Clone this repository or download the project as a zip
 * Unzip the folder
 * If you are using an IDE like Pycharm, Click File -> Open Project -> select the folder
+* Create a folder named data inside the root folder
 * The file settings.conf contains the basic settings like the data source and the port number on which the web service shall be run
 * Run the files sensor_1.py, sensor_2.py, sensor_3.py, publish_sensor1.py, publish_sensor2.py, publish_sensor3.py
 * Now to start the Web service run the file Univaq_Demo_Master.py
