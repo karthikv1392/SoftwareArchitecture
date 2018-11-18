@@ -1,0 +1,50 @@
+<html>
+
+<style type="text/css">
+	#wrapper {
+    width:1500px;
+    clear:both;
+}
+#first {
+    background-color:#00bfff;
+    width:500px;
+    float:left;
+}
+#second {
+    background-color:#00ffff;
+    width:500px;
+    float:left;
+}
+#third {
+    background-color:#bada55;
+    width:500px;
+    float:left;
+}
+</style>
+
+<div id="wrapper">
+  <div id="first"> <b> Sensor 1 </b> <br /></div>
+  <div id="second"><b> Sensor 2 </b> <br /></div>
+  <div id="third"> <b> Sensor 3 </b> <br /></div>
+</div>
+
+<script>
+if(typeof(EventSource) !== "undefined") {
+    var source = new EventSource("http://localhost:6001/sensor1");
+    var source1 = new EventSource("http://localhost:6001/sensor2");
+    var source2 = new EventSource("http://localhost:6001/sensor3");
+    source.onmessage = function(event) {
+        document.getElementById("first").innerHTML += event.data + "<br>";
+    };
+    source1.onmessage = function(event) {
+        document.getElementById("second").innerHTML += event.data + "<br>";
+    };
+    source2.onmessage = function(event) {
+        document.getElementById("third").innerHTML += event.data + "<br>";
+    };
+} else {
+    document.getElementById("first").innerHTML = "Sorry, your browser does not support server-sent events...";
+}
+</script>
+
+</html>
