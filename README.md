@@ -1,5 +1,13 @@
 # Publish Subscribe Using Apache Kafka
 
+## Installation Requirements
+1. Install flask - http://flask.pocoo.org/docs/1.0/installation/
+2. Install flask-cors - https://flask-cors.readthedocs.io/en/latest/
+3. Install kafka-python - https://pypi.org/project/kafka-python/
+
+
+## Instructions
+
 * Clone this repository or download the project as a zip
 * Unzip the folder
 * If you are using an IDE like Pycharm, Click File -> Open Project -> select the folder
