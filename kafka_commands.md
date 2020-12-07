@@ -14,6 +14,10 @@ bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-fac
 
 bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 
+# Write data to topic
+
+bin/kafka-console-producer.sh --topic sensor --bootstrap-server localhost:9092
+
 
 ## Test a consumer
 
